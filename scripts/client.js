@@ -12,6 +12,7 @@ class Employee {
         this.id = id;
         this.title = title;
         this.annualSalary = annualSalary;
+        this.monthsIncome = annualSalary / 12;
     } // end constructor
 } // Employee class
 
@@ -50,10 +51,6 @@ function deleteEmployee() {
     console.log('deleting employee');
 } // deleteEmployee
 
-function monthlyIncome(annualSalary) {
-    let monthPay = annualSalary / 12;
-    console.log( 'Your pay every month is:', monthPay );
-}
 function readyNow() {
     console.log('ready to go');
     $('#addEmployeeButton').on('click', addEmployee);
@@ -63,7 +60,7 @@ function readyNow() {
 /////////////////////////////////////////////////////////
 function addClickers() {
     $('.employeeDelete').on('click', deleteEmployee);
-}
+} // click listeners added later
 /////////////////////////////////////////////////////////
 
 function updateStaff(array){
@@ -80,7 +77,7 @@ for( let index of array ){
     <td>${index.id}</td>
     <td>${index.title}</td>
     <td>${index.annualSalary}</td>
-    <td></td>
+    <td>${index.monthsIncome}</td>
     <td><button class="employeeDelete">Delete</button></td></tr>`
     table.append(displayString);
      addClickers();
