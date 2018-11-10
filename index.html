@@ -13,16 +13,17 @@
 <body>
     <div><h1 class="jumbotron">Salary Calculator</h1>
     </div>
-    <div class="box" id="inputDiv">
+    <div class="box col-10 mx-auto" id="inputDiv">
         <h2>Add Employee</h2>
         <input type="text" placeholder="First Name" id="firstNameIn">
         <input type="text" placeholder="Last Name" id="lastNameIn">
-        <input type="text" placeholder="ID" id="idIn">
+        <input type="number" placeholder="ID" id="idIn">
         <input type="text" placeholder="Title" id="titleIn">
-        <input type="text" placeholder="Annual Salary" id="annualSalaryIn">
+        <input type="number" placeholder="Annual Salary" id="annualSalaryIn">
         <button type="submit" id="addEmployeeButton">Submit</button>
+
     </div>
-    <div class="box">
+    <div class="box col-10 mx-auto">
         <h2>Employees</h2>
         <table class="table table-striped" id="staffList">
             <thead>
@@ -32,6 +33,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
                     <th scope="col">Annual Salary</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody id="outputDiv">

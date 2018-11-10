@@ -1,5 +1,10 @@
 $(document).ready(readyNow);
 
+let deleteEmployeeButton = $('<button>Delete Employee</button>');
+deleteEmployeeButton.click (function (){
+    console.log('Deleting Employee');
+});
+
 class Employee {
     constructor(firstName, lastName, id, title, annualSalary) {
         this.firstName = firstName;
@@ -45,6 +50,9 @@ function addEmployee() {
     } // no empty fields
 } // addEmployee
 
+function deleteEmployee() {
+}
+
 function updateStaff(array){
 console.log('in updateStaff');
 // target the table by id
@@ -53,8 +61,8 @@ let table = $('#outputDiv')
 table.empty();
 // loop through the staff array and display each employee in the table
 for( let index of array ){
-    let displayString = `<tr><td>${index.firstName}</td><td>${index.lastName}</td><td>${index.id}</td><td>${index.title}</td><td>${index.annualSalary}</td></tr`
+    let displayString = `<tr><td>${index.firstName}</td><td>${index.lastName}</td><td>${index.id}</td><td>${index.title}</td><td>${index.annualSalary}</td><td id="employeeDelete"></td></tr>`
     table.append(displayString);
+    deleteEmployeeButton.appendTo('#employeeDelete')
 } // end for
-
 } // end updateStaff
