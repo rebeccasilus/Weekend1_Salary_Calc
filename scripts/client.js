@@ -50,10 +50,21 @@ function deleteEmployee() {
     console.log('deleting employee');
 } // deleteEmployee
 
+function monthlyIncome(annualSalary) {
+    let monthPay = annualSalary / 12;
+    console.log( 'Your pay every month is:', monthPay );
+}
 function readyNow() {
     console.log('ready to go');
     $('#addEmployeeButton').on('click', addEmployee);
+    $('#employeeDelete').on('click', deleteEmployee);
 } // readyNow
+
+/////////////////////////////////////////////////////////
+function addClickers() {
+    $('.employeeDelete').on('click', deleteEmployee);
+}
+/////////////////////////////////////////////////////////
 
 function updateStaff(array){
 console.log('in updateStaff');
@@ -69,10 +80,11 @@ for( let index of array ){
     <td>${index.id}</td>
     <td>${index.title}</td>
     <td>${index.annualSalary}</td>
-    <td><button id="employeeDelete">Delete</button></td></tr>`
+    <td></td>
+    <td><button class="employeeDelete">Delete</button></td></tr>`
     table.append(displayString);
-    //$('#employeeDelete').append(deleteEmployeeButton);
-    //deleteEmployeeButton.appendTo('#employeeDelete');
+     addClickers();
+
 } // end for
-    $('#employeeDelete').on('click', deleteEmployee);
+ 
 } // updateStaff
