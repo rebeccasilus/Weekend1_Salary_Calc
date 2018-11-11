@@ -13,7 +13,7 @@
 <body>
     <div><h1 class="jumbotron">Salary Calculator</h1>
     </div>
-    <div class="box col-10 mx-auto" id="inputDiv">
+    <div class="box col-11 mx-auto" id="inputDiv">
         <h2>Add Employee</h2>
         <input type="text" placeholder="First Name" id="firstNameIn">
         <input type="text" placeholder="Last Name" id="lastNameIn">
@@ -23,7 +23,7 @@
         <button type="submit" id="addEmployeeButton">Submit</button>
 
     </div>
-    <div class="box col-10 mx-auto">
+    <div class="box col-11 mx-auto">
         <h2>Employees</h2>
         <table class="table table-striped" id="staffList">
             <thead class="employeeHeader">
@@ -34,12 +34,23 @@
                     <th scope="col">Title</th>
                     <th scope="col">Annual Salary</th>
                     <th scope="col">Monthly Income</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody id="outputDiv">
                 <tr ></tr>
             </tbody>
+            <tfoot class="totalsDiv">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total:</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
         </table>
     </div>
     
