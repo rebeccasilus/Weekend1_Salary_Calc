@@ -1,3 +1,7 @@
+body {
+background-color: #ececec;
+}
+
 h1 {
 text-align: center;
 }
@@ -6,8 +10,39 @@ h2 {
 
 }
 
+#addEmployeeButton {
+
+}
+
 .box {
     padding: 40px;
     align-content: center;
     justify-content: center;
+}
+
+.container {
+padding-top: 50px;
+margin-top: 70px;
+margin-left:40px;
+margin-right; 40px;
+background-color: #ffffff;
+}
+
+.inputs {
+white-space: nowrap;
+width: 100%;
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+.monthlyTotalsBox {
+ background-color: #eeee22;
+}
+
+.totalBox {
+text-align: right;
+}
+
+.totalsDiv {
+background-color: white;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,49 +11,60 @@
     <link rel="stylesheet" href="scripts/style.css">
     <title>Salary Calculator</title>
 </head>
-<body>
-    <div><h1 class="jumbotron">Salary Calculator</h1>
-    </div>
-    <div class="box col-11 mx-auto" id="inputDiv">
-        <h2>Add Employee</h2>
-        <input type="text" placeholder="First Name" id="firstNameIn">
-        <input type="text" placeholder="Last Name" id="lastNameIn">
-        <input type="number" placeholder="ID" id="idIn">
-        <input type="text" placeholder="Title" id="titleIn">
-        <input type="number" placeholder="Annual Salary" id="annualSalaryIn">
-        <button type="submit" id="addEmployeeButton">Submit</button>
 
+<body>
+    <div class="container">
+        <div>
+            <h1 class="">Salary Calculator</h1>
+        </div>
+        <div class="box mx-auto" id="inputDiv">
+            <h2>Add Employee</h2>
+            <div class="inputs">
+                <input type="text" placeholder="First Name" id="firstNameIn">
+                <input type="text" placeholder="Last Name" id="lastNameIn">
+                <input type="number" placeholder="ID" id="idIn">
+                <input type="text" placeholder="Title" id="titleIn">
+                <input type="number" placeholder="Annual Salary" id="annualSalaryIn">
+            </div>
+            <button type="submit" id="addEmployeeButton">Submit</button>
+        </div>
+        <div class="box mx-auto">
+            <h2>Employees</h2>
+            <table class="table table-striped" id="staffList">
+                <thead class="employeeHeader">
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Annual Salary</th>
+                        <!-- <th scope="col">Monthly Income</th> -->
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="outputDiv">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot class="totalsDiv">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="totalBox" id="salaryBox"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
-    <div class="box col-11 mx-auto">
-        <h2>Employees</h2>
-        <table class="table table-striped" id="staffList">
-            <thead class="employeeHeader">
-                <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">ID</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Annual Salary</th>
-                    <th scope="col">Monthly Income</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody id="outputDiv">
-                <tr ></tr>
-            </tbody>
-            <tfoot class="totalsDiv">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Total:</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-    
 </body>
+
 </html>
