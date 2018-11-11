@@ -1,5 +1,6 @@
 $(document).ready(readyNow);
 
+let budget = 20000;
 let salaryTotal = [];
 
 class Employee {
@@ -57,22 +58,16 @@ function addClickers() {
 } // click listeners added later
 /////////////////////////////////////////////////////////
 
-// function updateMonthlyCost() {
-// }
-
-function updateSalaryTotal() {
-    console.log('in updateFinalTotal');
-    // start total of salaries at 0
-    let salaryFinalTotal = 0;
-    // loop through salaries and show on DOM
-    let outputElement = $('#salaryBox');
-    //outputElement.empty();
-    for (salary of salaryTotal) {
-        outputElement.append(Number(salary.annualSalary).toFixed(2));
-        //totalSalaries += Number(salary.annualSalary);
-        updateMonthlyTotals(totalSalaries);
-    }
-}
+function monthlyCosts( allSalariesArgument ) {
+    console.log(' in remainingBudget:', allSalariesArgument );
+    let costOutput = $('#costOutput');
+    let totalMonthlyCosts = allSalariesArgument;
+    costOutput.empty();
+    costOutput.append( allSalariesArgument.toFixed(2) );
+    if ( totalMonthlyCosts > 20000 ){
+        costOutput.css( 'background-color', 'red');
+    } // end over budger
+} // end remainingBudget
 
 function updateStaff(array) {
     // console.log('in updateStaff');
@@ -95,8 +90,7 @@ function updateStaff(array) {
         outputDiv.append(displayString);
         // declare total number of expenses every month
         totalExpenses += Number( `${index.annualSalary}` ) / 12;
-        console.log( totalExpenses );
-        
+        // totalExpenses += ()`${index.annualSalary}`.toFixed( 2 ) / 12;
         // tells the delete button to do its thing
         $(`#${index.id}button`).on('click', function () {
             console.log(index.id);
@@ -104,4 +98,8 @@ function updateStaff(array) {
         }); // end Delete button
         // update the salary total
     } // end for
+    // console.log( totalExpenses );
+    // update the remainingBudget by subtracting totalExpenses from budget
+    monthlyCosts( totalExpenses );
 } // updateStaff
+

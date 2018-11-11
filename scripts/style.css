@@ -37,6 +37,8 @@ overflow-y: hidden;
 
 .monthlyTotalsBox {
  background-color: #eeee22;
+ display: flex;
+ justify-content: flex-end;
 }
 
 .totalBox {
